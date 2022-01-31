@@ -22,6 +22,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        viewBinding true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -40,6 +43,12 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation "me.tatarka.redux:redux-core:0.11"
+    implementation "me.tatarka.redux:redux-android:0.11"
+    implementation "me.tatarka.redux:redux-android-lifecycle:0.11"
+    implementation "me.tatarka.redux:redux-thunk:0.11"
+    implementation "me.tatarka.redux:redux-rx:0.11"
+    implementation "me.tatarka.redux:redux-rx2:0.11"
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
