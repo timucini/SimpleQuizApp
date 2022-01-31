@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/activity_quiz.xml" value="0.19479166666666667" />
+        <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/activity_state.xml" value="0.1921875" />
+        <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/activity_state2.xml" value="0.1921875" />
         <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/question_fragment.xml" value="0.25" />
+        <entry key="..\:/work/SimpleQuiz/app/src/main/res/layout/state_quiz_fragment.xml" value="0.1921875" />
       </map>
     </option>
   </component>

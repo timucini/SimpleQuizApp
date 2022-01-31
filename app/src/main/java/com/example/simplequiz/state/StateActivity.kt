@@ -1,11 +1,12 @@
-package com.example.simplequiz
+package com.example.simplequiz.state
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.simplequiz.R
 
-class QuizActivity : AppCompatActivity() {
+class StateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz)
+        setContentView(R.layout.activity_state)
     }
 }

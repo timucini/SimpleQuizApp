@@ -1,9 +1,8 @@
-package com.example.simplequiz
+package com.example.simplequiz.redux.ui
 
 import android.app.Application
-import androidx.lifecycle.ViewModel
 import com.example.simplequiz.model.Response
-import com.example.simplequiz.store.MainStore
+import com.example.simplequiz.redux.store.MainStore
 import me.tatarka.redux.android.lifecycle.StoreAndroidViewModel
 
 class QuestionViewModel : StoreAndroidViewModel<Response, MainStore> {

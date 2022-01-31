@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleQuiz">
         <activity
-            android:name=".QuizActivity"
+            android:name=".state.StateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".redux.ui.QuizActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

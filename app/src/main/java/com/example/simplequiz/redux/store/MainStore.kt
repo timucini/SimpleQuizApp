@@ -1,4 +1,4 @@
-package com.example.simplequiz.store
+package com.example.simplequiz.redux.store
 
 import com.example.simplequiz.model.Response
 import me.tatarka.redux.SimpleStore
