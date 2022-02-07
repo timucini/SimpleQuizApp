@@ -21,8 +21,6 @@ class StateQuizViewModel() : ViewModel() {
     private val _uiState = MutableStateFlow<StateQuizUiState>(StateQuizUiState.Empty)
     // The UI collects form this StateFlow to get its state updates
     val uiState: StateFlow<StateQuizUiState> = _uiState
-    private var currentCount = 0
-    private lateinit var currentQuestion: DisplayQuestion
 
     init {
         val quizApi = RetroFitApi.getInstance().create(QuizApi::class.java)

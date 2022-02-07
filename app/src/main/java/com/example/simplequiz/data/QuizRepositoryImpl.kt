@@ -23,7 +23,7 @@ class QuizRepositoryImpl(private val quizApi: QuizApi): QuizRepository {
     }
 
     override suspend fun getQuestionsWithRedux(): QuizResponse = withContext(Dispatchers.IO) {
-        val response = quizApi.getQuestionsRedux()
+        val response = quizApi.get10ComputerQuestions()
         response
     }
 }

@@ -4,6 +4,6 @@ import com.example.simplequiz.model.QuizResponse
 
 data class AppState(
     val quizResponse: QuizResponse,
-    val user: String
+    val userName: String
 )
 

@@ -12,6 +12,4 @@ interface QuizApi {
     @GET("api.php?amount=10&category=18&type=multiple")
     suspend fun get10ComputerQuestions() : QuizResponse
 
-    @GET("api.php?amount=10&category=18&type=multiple")
-    suspend fun getQuestionsRedux() : QuizResponse
 }

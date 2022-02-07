@@ -1,13 +1,11 @@
 package com.example.simplequiz.redux.store
 
-import com.example.simplequiz.model.QuizResponse
 import com.example.simplequiz.redux.action.Action
-import com.example.simplequiz.redux.action.Load
-import com.example.simplequiz.redux.action.LoadActionCreate
 import com.example.simplequiz.redux.reducer.QuizReducers
+import com.example.simplequiz.redux.state.AppState
 import me.tatarka.redux.*
 
-class MainStore(initialState: QuizResponse?) : SimpleStore<QuizResponse>(initialState) {
+class MainStore(initialState: AppState?) : SimpleStore<AppState>(initialState) {
 
     private val dispatcher: Dispatcher<Action,Action>
     private val thunkDispatcher: Dispatcher<Thunk<Action,Action>, Void>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SimpleQuiz</string>
+    <string name="positive_btn">Change Username</string>
 </resources>
