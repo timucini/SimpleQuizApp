@@ -8,3 +8,5 @@ interface Action {
 }
 
 data class Load(val quizResponse: QuizResponse): Action
+
+data class AddUserName(val name: String): Action

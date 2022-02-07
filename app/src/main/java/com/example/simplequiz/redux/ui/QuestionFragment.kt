@@ -32,7 +32,7 @@ class QuestionFragment : Fragment() {
         }
 
         viewModel.state.observe(viewLifecycleOwner,questionObserver)
-        return  binding.root
+        return binding.root
     }
 
 
