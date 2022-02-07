@@ -4,26 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentState"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".state.StateQuizFragment">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvQuestionText"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="some text"
-        app:layout_constraintBottom_toTopOf="@+id/materialButton"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnswer1"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Answer1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionText" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnswer2"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Answer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnswer3"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Answer3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnswer2" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnswer4"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="38dp"
+        android:text="Answer4"
+        app:layout_constraintStart_toStartOf="@+id/btnAnswer1"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnswer1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

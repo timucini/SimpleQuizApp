@@ -18,9 +18,9 @@
 
     <Button
         android:id="@+id/btnAnswer1"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="Answer1"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,16 +28,16 @@
 
     <Button
         android:id="@+id/btnAnswer2"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:text="Answer2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnAnswer1" />
 
     <Button
         android:id="@+id/btnAnswer3"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Answer3"
@@ -46,7 +46,7 @@
 
     <Button
         android:id="@+id/btnAnswer4"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Answer4"

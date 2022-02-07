@@ -1,6 +1,7 @@
 package com.example.simplequiz.api
 
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetroFitApi {
@@ -10,6 +11,7 @@ object RetroFitApi {
     fun getInstance() : Retrofit {
         return Retrofit.Builder().baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
             .build()
     }
 }

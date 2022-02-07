@@ -4,6 +4,9 @@ import com.example.simplequiz.api.QuizApi
 import com.example.simplequiz.model.QuizResponse
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import retrofit2.Call
+import retrofit2.await
+import retrofit2.awaitResponse
 
 class QuizRepositoryImpl(private val quizApi: QuizApi): QuizRepository {
     override val computerQuestions: Flow<QuizResponse> = flow {
@@ -15,5 +18,9 @@ class QuizRepositoryImpl(private val quizApi: QuizApi): QuizRepository {
             emit(questionList)
 
         }
+    }
+
+    override fun getQuestionsWithRedux(): Call<QuizResponse> {
+        return quizApi.getQuestionsRedux()
     }
 }

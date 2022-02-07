@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.simplequiz.api.QuizApi
 import com.example.simplequiz.api.RetroFitApi
 import com.example.simplequiz.data.QuizRepositoryImpl
+import com.example.simplequiz.model.DisplayQuestion
 import com.example.simplequiz.model.Result
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -20,6 +21,8 @@ class StateQuizViewModel() : ViewModel() {
     private val _uiState = MutableStateFlow<StateQuizUiState>(StateQuizUiState.Empty)
     // The UI collects form this StateFlow to get its state updates
     val uiState: StateFlow<StateQuizUiState> = _uiState
+    private var currentCount = 0
+    private lateinit var currentQuestion: DisplayQuestion
 
     init {
         val quizApi = RetroFitApi.getInstance().create(QuizApi::class.java)
@@ -33,6 +36,7 @@ class StateQuizViewModel() : ViewModel() {
                 .collect { quizResponse ->
                     _uiState.value = StateQuizUiState.Success(quizResponse.results)
                     Log.d("ComputerQuestion","ComputerQuestions successfully loaded")
+
                 }
         }
     }

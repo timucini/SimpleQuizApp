@@ -34,6 +34,7 @@ class StateQuizFragment : Fragment() {
                 when(it) {
                     is StateQuizViewModel.StateQuizUiState.Success -> {
                         Log.d("uiState",it.questionList.toString())
+                        binding.tvQuestionText.text = it.questionList[0].question
                     }
                     is StateQuizViewModel.StateQuizUiState.Error -> {
                         Log.d("uiState",it.exception.message.toString())
