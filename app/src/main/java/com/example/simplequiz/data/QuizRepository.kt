@@ -7,5 +7,5 @@ import retrofit2.Call
 interface QuizRepository {
     val computerQuestions: Flow<QuizResponse>
 
-    fun getQuestionsWithRedux() : Call<QuizResponse>
+    suspend fun getQuestionsWithRedux() : QuizResponse
 }

@@ -2,8 +2,10 @@ package com.example.simplequiz.data
 
 import com.example.simplequiz.api.QuizApi
 import com.example.simplequiz.model.QuizResponse
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.withContext
 import retrofit2.Call
 import retrofit2.await
 import retrofit2.awaitResponse
@@ -20,7 +22,8 @@ class QuizRepositoryImpl(private val quizApi: QuizApi): QuizRepository {
         }
     }
 
-    override fun getQuestionsWithRedux(): Call<QuizResponse> {
-        return quizApi.getQuestionsRedux()
+    override suspend fun getQuestionsWithRedux(): QuizResponse = withContext(Dispatchers.IO) {
+        val response = quizApi.getQuestionsRedux()
+        response
     }
 }
