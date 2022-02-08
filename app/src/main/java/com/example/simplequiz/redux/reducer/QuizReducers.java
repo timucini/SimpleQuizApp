@@ -4,7 +4,6 @@ import com.example.simplequiz.redux.action.Action;
 import com.example.simplequiz.redux.action.AddUserName;
 import com.example.simplequiz.redux.action.Load;
 import com.example.simplequiz.redux.state.AppState;
-
 import me.tatarka.redux.Reducer;
 import me.tatarka.redux.Reducers;
 
