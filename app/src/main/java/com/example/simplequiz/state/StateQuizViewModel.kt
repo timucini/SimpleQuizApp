@@ -5,17 +5,23 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.simplequiz.api.QuizApi
 import com.example.simplequiz.api.RetroFitApi
+import com.example.simplequiz.data.QuizRepository
 import com.example.simplequiz.data.QuizRepositoryImpl
 import com.example.simplequiz.model.DisplayQuestion
 import com.example.simplequiz.model.Result
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.lang.Exception
+import javax.inject.Inject
 
-class StateQuizViewModel() : ViewModel() {
+@HiltViewModel
+class StateQuizViewModel @Inject constructor(
+    private val repository: QuizRepository
+) : ViewModel() {
 
 
     private val _uiState = MutableStateFlow<StateQuizUiState>(StateQuizUiState.Empty)
@@ -23,8 +29,6 @@ class StateQuizViewModel() : ViewModel() {
     val uiState: StateFlow<StateQuizUiState> = _uiState
 
     init {
-        val quizApi = RetroFitApi.getInstance().create(QuizApi::class.java)
-        val repository = QuizRepositoryImpl(quizApi)
         viewModelScope.launch {
             repository.computerQuestions
                 .catch { exception ->

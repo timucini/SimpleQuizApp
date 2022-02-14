@@ -15,7 +15,9 @@ import com.example.simplequiz.redux.action.AddUserName
 import com.example.simplequiz.redux.action.LoadActionCreate
 import com.example.simplequiz.redux.middleware.DataStore
 import com.example.simplequiz.redux.state.AppState
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class QuestionFragment : Fragment() {
 
     private var _binding: QuestionFragmentBinding? = null
@@ -29,7 +31,7 @@ class QuestionFragment : Fragment() {
     ): View? {
         _binding = QuestionFragmentBinding.inflate(layoutInflater, container, false)
         val store = viewModel.store;
-        store.dispatch(LoadActionCreate(DataStore()).load())
+        viewModel.loadQuestion()
 
         val questionObserver = Observer<AppState> { response ->
             binding.tvQuestionText.text = response.quizResponse.results[0].question

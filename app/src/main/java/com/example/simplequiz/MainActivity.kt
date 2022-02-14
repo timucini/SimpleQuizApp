@@ -6,7 +6,9 @@ import android.os.Bundle
 import com.example.simplequiz.databinding.ActivityMainBinding
 import com.example.simplequiz.redux.ui.QuizActivity
 import com.example.simplequiz.state.StateActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

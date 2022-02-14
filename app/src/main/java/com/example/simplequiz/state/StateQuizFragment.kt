@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.simplequiz.databinding.StateQuizFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.collect
 
+@AndroidEntryPoint
 class StateQuizFragment : Fragment() {
 
     private var _binding: StateQuizFragmentBinding? = null

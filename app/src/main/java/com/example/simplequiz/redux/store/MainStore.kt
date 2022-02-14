@@ -5,7 +5,7 @@ import com.example.simplequiz.redux.reducer.QuizReducers
 import com.example.simplequiz.redux.state.AppState
 import me.tatarka.redux.*
 
-class MainStore(initialState: AppState?) : SimpleStore<AppState>(initialState) {
+class MainStore(initialState: AppState) : SimpleStore<AppState>(initialState) {
 
     private val dispatcher: Dispatcher<Action,Action>
     private val thunkDispatcher: Dispatcher<Thunk<Action,Action>, Void>

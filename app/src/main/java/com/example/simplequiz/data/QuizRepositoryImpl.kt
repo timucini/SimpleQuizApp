@@ -9,8 +9,9 @@ import kotlinx.coroutines.withContext
 import retrofit2.Call
 import retrofit2.await
 import retrofit2.awaitResponse
+import javax.inject.Inject
 
-class QuizRepositoryImpl(private val quizApi: QuizApi): QuizRepository {
+class QuizRepositoryImpl @Inject constructor(private val quizApi: QuizApi): QuizRepository {
     override val computerQuestions: Flow<QuizResponse> = flow {
         // while (true) to constantly update State
 
